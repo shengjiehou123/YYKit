@@ -57,6 +57,7 @@ YYSYNTH_DUMMY_CLASS(NSNumber_YYAdd)
     // normal number
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [formatter setLocale:locale];
     [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
     return [formatter numberFromString:string];
 }
